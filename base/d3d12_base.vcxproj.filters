@@ -19,19 +19,61 @@
     <Filter Include="Source Files\Common">
       <UniqueIdentifier>{bc54402a-f387-4b28-9166-a18d50915e26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Common\core">
+      <UniqueIdentifier>{8dea0f95-99df-4553-b57b-11cd486bbd94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\io">
+      <UniqueIdentifier>{903c5edb-f75e-48df-a97e-988c0c39f0cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\d3d12">
+      <UniqueIdentifier>{2b4b0213-875b-45ff-b2c3-0300892afe47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\io\format">
+      <UniqueIdentifier>{4f2d5812-a46f-4604-8bd2-150392f709f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\utils">
+      <UniqueIdentifier>{48c754f8-3d27-44b2-9da4-08f251cd5c84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="d3d12_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\common\io.cpp">
-      <Filter>Source Files\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\mesh.cpp">
-      <Filter>Source Files\Common</Filter>
-    </ClCompile>
     <ClCompile Include="..\common\utils.cpp">
       <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\scene.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\mesh.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\io\buffer.cpp">
+      <Filter>Source Files\Common\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\io\format\obj.cpp">
+      <Filter>Source Files\Common\io\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\material.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\texture.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\io\format\image.cpp">
+      <Filter>Source Files\Common\io\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\primitive.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\light.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\core\camera.cpp">
+      <Filter>Source Files\Common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lib\utils\trackball.cpp">
+      <Filter>Source Files\Common\utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,14 +88,50 @@
     <ClInclude Include="..\common\utils.h">
       <Filter>Source Files\Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\common\io.h">
-      <Filter>Source Files\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\mesh.h">
-      <Filter>Source Files\Common</Filter>
-    </ClInclude>
     <ClInclude Include="..\common\heap.h">
       <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\scene.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\mesh.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\core.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\io\buffer.h">
+      <Filter>Source Files\Common\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\utils.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\d3d12\d3d12_utils.h">
+      <Filter>Source Files\Common\d3d12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\io\format\obj.h">
+      <Filter>Source Files\Common\io\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\material.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\texture.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\io\format\image.h">
+      <Filter>Source Files\Common\io\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\primitive.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\light.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\core\camera.h">
+      <Filter>Source Files\Common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\utils\trackball.h">
+      <Filter>Source Files\Common\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

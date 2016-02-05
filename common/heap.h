@@ -57,7 +57,7 @@ BufferSubAllocator<type, flags, align>::BufferSubAllocator(ID3D12Device* pDevice
     resourceDesc.Layout                 = D3D12_TEXTURE_LAYOUT_ROW_MAJOR;
     resourceDesc.Flags                  = flags;
 
-    if (FAILED(pD3DDevice->CreateCommittedResource(&heapProperties, D3D12_HEAP_FLAG_NONE, &resourceDesc, D3D12_RESOURCE_STATE_GENERIC_READ, NULL, IID_PPV_ARGS(&pResource))))
+    if (FAILED(pDevice->CreateCommittedResource(&heapProperties, D3D12_HEAP_FLAG_NONE, &resourceDesc, D3D12_RESOURCE_STATE_GENERIC_READ, NULL, IID_PPV_ARGS(&pResource))))
     {
         throw std::exception("** Can't create sub allocator\n");
     }

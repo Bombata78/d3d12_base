@@ -1,0 +1,5 @@
+base/x64/
+*.VC.opendb
+*.sdf
+x64/
+.vs/

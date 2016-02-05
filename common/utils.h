@@ -5,7 +5,7 @@
 #include <d3d12.h>
 #include <cstddef>
 #include <cassert>
-#include "lib/glm/glm/glm.hpp"
+#include "glm/glm/glm.hpp"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //  CopyTexture()

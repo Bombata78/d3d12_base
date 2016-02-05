@@ -69,11 +69,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Program Files %28x86%29\Windows Kits\10\Include\10.0.10240.0\shared;C:\Program Files %28x86%29\Windows Kits\10\Include\10.0.10240.0\um;../;$(IncludePath)</IncludePath>
+    <IncludePath>../common/lib/;../;../../;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.10240.0\um\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Program Files %28x86%29\Windows Kits\10\Include\10.0.10240.0\shared;C:\Program Files %28x86%29\Windows Kits\10\Include\10.0.10240.0\um;../;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>../common/lib/;../;../../;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,10 +93,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLM_FORCE_RADIANS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3dcompiler.lib;dxgi.lib;d3d12.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,16 +122,27 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLM_FORCE_RADIANS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\io.cpp" />
-    <ClCompile Include="..\common\mesh.cpp" />
+    <ClCompile Include="..\common\lib\core\camera.cpp" />
+    <ClCompile Include="..\common\lib\core\light.cpp" />
+    <ClCompile Include="..\common\lib\core\material.cpp" />
+    <ClCompile Include="..\common\lib\core\mesh.cpp" />
+    <ClCompile Include="..\common\lib\core\primitive.cpp" />
+    <ClCompile Include="..\common\lib\core\scene.cpp" />
+    <ClCompile Include="..\common\lib\core\texture.cpp" />
+    <ClCompile Include="..\common\lib\io\buffer.cpp" />
+    <ClCompile Include="..\common\lib\io\format\image.cpp" />
+    <ClCompile Include="..\common\lib\io\format\obj.cpp" />
+    <ClCompile Include="..\common\lib\utils\trackball.cpp" />
     <ClCompile Include="..\common\utils.cpp" />
     <ClCompile Include="d3d12_base.cpp" />
   </ItemGroup>
@@ -136,8 +152,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\heap.h" />
-    <ClInclude Include="..\common\io.h" />
-    <ClInclude Include="..\common\mesh.h" />
+    <ClInclude Include="..\common\lib\core\camera.h" />
+    <ClInclude Include="..\common\lib\core\core.h" />
+    <ClInclude Include="..\common\lib\core\light.h" />
+    <ClInclude Include="..\common\lib\core\material.h" />
+    <ClInclude Include="..\common\lib\core\mesh.h" />
+    <ClInclude Include="..\common\lib\core\primitive.h" />
+    <ClInclude Include="..\common\lib\core\scene.h" />
+    <ClInclude Include="..\common\lib\core\texture.h" />
+    <ClInclude Include="..\common\lib\core\utils.h" />
+    <ClInclude Include="..\common\lib\d3d12\d3d12_utils.h" />
+    <ClInclude Include="..\common\lib\io\buffer.h" />
+    <ClInclude Include="..\common\lib\io\format\image.h" />
+    <ClInclude Include="..\common\lib\io\format\obj.h" />
+    <ClInclude Include="..\common\lib\utils\trackball.h" />
     <ClInclude Include="..\common\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
