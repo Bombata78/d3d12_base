@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>../common/lib/;../;../../;$(IncludePath)</IncludePath>
+    <IncludePath>../../lib/;../common/lib/;../;../../;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\Windows Kits\10\Lib\10.0.10240.0\um\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
